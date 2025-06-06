@@ -1,0 +1,28 @@
+Started by user [8mha:////4F3NOJexyXKqEvT/IJeB6zKNSAOdlcqOt3aTcYKl3PkfAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL94sRMAKMY3I6+AAAA[0msai
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job-1
+The recommended git tool is: NONE
+using credential eae984b2-1efc-4096-b178-ba4908e05b93
+ > /usr/bin/git rev-parse --resolve-git-dir /var/lib/jenkins/workspace/job-1/.git # timeout=10
+Fetching changes from the remote Git repository
+ > /usr/bin/git config remote.origin.url https://github.com/ksdkr/Boardgame.git # timeout=10
+Fetching upstream changes from https://github.com/ksdkr/Boardgame.git
+ > /usr/bin/git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --force --progress -- https://github.com/ksdkr/Boardgame.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git rev-parse origin/main^{commit} # timeout=10
+Checking out Revision 274fae9baeefc7ace8b1dd8b05f8c2695f89fae0 (origin/main)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 274fae9baeefc7ace8b1dd8b05f8c2695f89fae0 # timeout=10
+Commit message: "Update Dockerfile"
+ > /usr/bin/git rev-list --no-walk 274fae9baeefc7ace8b1dd8b05f8c2695f89fae0 # timeout=10
+[job-1] $ /bin/sh -xe /tmp/jenkins8584194622505322006.sh
++ readlink -f /usr/bin/java
++ sed s:/bin/java::
++ export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64
++ export PATH=/usr/lib/jvm/java-21-openjdk-amd64/bin:/usr/lib/jvm/java-21-openjdk-amd64/bin:/usr/lib/jvm/java-21-openjdk-amd64/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin
++ mvn package
+/tmp/jenkins8584194622505322006.sh: 5: mvn: not found
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

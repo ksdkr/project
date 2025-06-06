@@ -1,0 +1,55 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<flow-definition plugin="workflow-job@1532.va_9a_d244074a_3">
+  <actions>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobAction plugin="pipeline-model-definition@2.2255.v56a_15e805f12"/>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction plugin="pipeline-model-definition@2.2255.v56a_15e805f12">
+      <jobProperties/>
+      <triggers/>
+      <parameters/>
+      <options/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.actions.DeclarativeJobPropertyTrackerAction>
+  </actions>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <org.jenkinsci.plugins.workflow.multibranch.BranchJobProperty plugin="workflow-multibranch@806.vb_b_688f609ee9">
+      <branch plugin="branch-api@2.1217.v43d8b_b_d8b_2c7">
+        <sourceId>f254e149-f7ca-430b-ad25-887ae5c8c774</sourceId>
+        <head class="jenkins.plugins.git.GitBranchSCMHead" plugin="git@5.7.0">
+          <name>main</name>
+        </head>
+        <scm class="hudson.plugins.git.GitSCM" plugin="git@5.7.0">
+          <configVersion>2</configVersion>
+          <userRemoteConfigs>
+            <hudson.plugins.git.UserRemoteConfig>
+              <name>origin</name>
+              <refspec>+refs/heads/*:refs/remotes/origin/*</refspec>
+              <url>https://github.com/ksdkr/Boardgame.git</url>
+              <credentialsId>eae984b2-1efc-4096-b178-ba4908e05b93</credentialsId>
+            </hudson.plugins.git.UserRemoteConfig>
+          </userRemoteConfigs>
+          <branches class="singleton-list">
+            <hudson.plugins.git.BranchSpec>
+              <name>main</name>
+            </hudson.plugins.git.BranchSpec>
+          </branches>
+          <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+          <submoduleCfg class="empty-list"/>
+          <extensions>
+            <jenkins.plugins.git.GitSCMSourceDefaults>
+              <includeTags>false</includeTags>
+            </jenkins.plugins.git.GitSCMSourceDefaults>
+          </extensions>
+        </scm>
+        <properties/>
+        <actions>
+          <jenkins.scm.api.metadata.PrimaryInstanceMetadataAction plugin="scm-api@704.v3ce5c542825a_"/>
+        </actions>
+      </branch>
+    </org.jenkinsci.plugins.workflow.multibranch.BranchJobProperty>
+  </properties>
+  <definition class="org.jenkinsci.plugins.workflow.multibranch.SCMBinder" plugin="workflow-multibranch@806.vb_b_688f609ee9">
+    <scriptPath>Jenkinsfile</scriptPath>
+  </definition>
+  <triggers/>
+  <disabled>false</disabled>
+</flow-definition>

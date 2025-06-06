@@ -1,0 +1,25 @@
+Started by user [8mha:////4F3NOJexyXKqEvT/IJeB6zKNSAOdlcqOt3aTcYKl3PkfAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL94sRMAKMY3I6+AAAA[0msai
+Running as SYSTEM
+Building on the built-in node in workspace /var/lib/jenkins/workspace/multi-pipeline
+The recommended git tool is: NONE
+using credential eae984b2-1efc-4096-b178-ba4908e05b93
+Cloning the remote Git repository
+Cloning repository https://github.com/ksdkr/Boardgame.git
+ > /usr/bin/git init /var/lib/jenkins/workspace/multi-pipeline # timeout=10
+Fetching upstream changes from https://github.com/ksdkr/Boardgame.git
+ > /usr/bin/git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --force --progress -- https://github.com/ksdkr/Boardgame.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > /usr/bin/git config remote.origin.url https://github.com/ksdkr/Boardgame.git # timeout=10
+ > /usr/bin/git config --add remote.origin.fetch +refs/heads/*:refs/remotes/origin/* # timeout=10
+Avoid second fetch
+ > /usr/bin/git rev-parse origin/main^{commit} # timeout=10
+Checking out Revision 274fae9baeefc7ace8b1dd8b05f8c2695f89fae0 (origin/main)
+ > /usr/bin/git config core.sparsecheckout # timeout=10
+ > /usr/bin/git checkout -f 274fae9baeefc7ace8b1dd8b05f8c2695f89fae0 # timeout=10
+Commit message: "Update Dockerfile"
+First time build. Skipping changelog.
+Triggering [8mha:////4P+3FW9pYhzIVc5FRKZkyNJL1Gxl2Ilkm/zqqc038nrRAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyJEgYZ/az8JP3c0pySTN2CzIJUoL2p+impaYlAEX0AaHW+5NEAAAA=[0mmulti-pipeline » default
+[8mha:////4P+3FW9pYhzIVc5FRKZkyNJL1Gxl2Ilkm/zqqc038nrRAAAAph+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyJEgYZ/az8JP3c0pySTN2CzIJUoL2p+impaYlAEX0AaHW+5NEAAAA=[0mmulti-pipeline » default completed with result SUCCESS
+Finished: SUCCESS

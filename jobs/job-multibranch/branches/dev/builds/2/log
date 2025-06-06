@@ -1,0 +1,42 @@
+Started by user [8mha:////4F3NOJexyXKqEvT/IJeB6zKNSAOdlcqOt3aTcYKl3PkfAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL94sRMAKMY3I6+AAAA[0msai
+ > /usr/bin/git rev-parse --resolve-git-dir /var/lib/jenkins/caches/git-beb232fec51f2e8ad072582b62fc88e8/.git # timeout=10
+Setting origin to https://github.com/ksdkr/Boardgame.git
+ > /usr/bin/git config remote.origin.url https://github.com/ksdkr/Boardgame.git # timeout=10
+Fetching origin...
+Fetching upstream changes from origin
+ > /usr/bin/git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+ > /usr/bin/git config --get remote.origin.url # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --force --progress -- origin +refs/heads/*:refs/remotes/origin/* # timeout=10
+Seen branch in repository origin/dev
+Seen branch in repository origin/main
+Seen 2 remote branches
+Obtained Jenkinsfile from 274fae9baeefc7ace8b1dd8b05f8c2695f89fae0
+org.codehaus.groovy.control.MultipleCompilationErrorsException: startup failed:
+WorkflowScript: 5: Tool type "maven" does not have an install of "maven3.6" configured - did you mean "maven"? @ line 5, column 15.
+           maven 'maven3.6'
+                 ^
+
+WorkflowScript: 6: Tool type "jdk" does not have an install of "jdk17" configured - did you mean "java17"? @ line 6, column 13.
+           jdk 'jdk17'
+               ^
+
+2 errors
+
+	at org.codehaus.groovy.control.ErrorCollector.failIfErrors(ErrorCollector.java:309)
+	at org.codehaus.groovy.control.CompilationUnit.applyToPrimaryClassNodes(CompilationUnit.java:1107)
+	at org.codehaus.groovy.control.CompilationUnit.doPhaseOperation(CompilationUnit.java:624)
+	at org.codehaus.groovy.control.CompilationUnit.processPhaseOperations(CompilationUnit.java:602)
+	at org.codehaus.groovy.control.CompilationUnit.compile(CompilationUnit.java:579)
+	at groovy.lang.GroovyClassLoader.doParseClass(GroovyClassLoader.java:323)
+	at groovy.lang.GroovyClassLoader.parseClass(GroovyClassLoader.java:293)
+	at PluginClassLoader for script-security//org.jenkinsci.plugins.scriptsecurity.sandbox.groovy.GroovySandbox$Scope.parse(GroovySandbox.java:163)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.doParse(CpsGroovyShell.java:188)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsGroovyShell.reparse(CpsGroovyShell.java:173)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.parseScript(CpsFlowExecution.java:650)
+	at PluginClassLoader for workflow-cps//org.jenkinsci.plugins.workflow.cps.CpsFlowExecution.start(CpsFlowExecution.java:596)
+	at PluginClassLoader for workflow-job//org.jenkinsci.plugins.workflow.job.WorkflowRun.run(WorkflowRun.java:339)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:446)
+Finished: FAILURE

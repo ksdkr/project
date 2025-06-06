@@ -1,0 +1,46 @@
+Started by user [8mha:////4F3NOJexyXKqEvT/IJeB6zKNSAOdlcqOt3aTcYKl3PkfAAAAlR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZO/dLi1CL94sRMAKMY3I6+AAAA[0msai
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/job-1
+Installing Eclipse Temurin from /var/lib/jenkins/caches/adoptopenjdk/LINUX/amd64/jdk-21.0.3+9.zip to /var/lib/jenkins/tools/hudson.model.JDK/java on Jenkins
+The recommended git tool is: NONE
+No credentials specified
+Installing Eclipse Temurin from /var/lib/jenkins/caches/adoptopenjdk/LINUX/amd64/jdk-21.0.3+9.zip to /var/lib/jenkins/tools/hudson.model.JDK/java on Jenkins
+java.nio.file.AccessDeniedException: /var/lib/jenkins/tools/hudson.model.JDK/hudson.model.JDK/lib/server/classes.jsa
+	at java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:90)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106)
+	at java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at java.base/sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:261)
+	at java.base/java.nio.file.spi.FileSystemProvider.newOutputStream(FileSystemProvider.java:482)
+	at java.base/java.nio.file.Files.newOutputStream(Files.java:228)
+	at hudson.util.IOUtils.copy(IOUtils.java:52)
+	at hudson.FilePath.unzip(FilePath.java:715)
+	at hudson.FilePath.unzip(FilePath.java:688)
+	at hudson.FilePath$UnzipFrom.invoke(FilePath.java:676)
+	at hudson.FilePath$UnzipFrom.invoke(FilePath.java:667)
+	at hudson.FilePath.act(FilePath.java:1213)
+	at hudson.FilePath.act(FilePath.java:1196)
+	at hudson.FilePath.unzipFrom(FilePath.java:664)
+	at PluginClassLoader for adoptopenjdk//io.jenkins.plugins.adoptopenjdk.AdoptOpenJDKInstaller.performInstallation(AdoptOpenJDKInstaller.java:130)
+Caused: java.io.IOException: Failed to unpack file:/var/lib/jenkins/caches/adoptopenjdk/LINUX/amd64/jdk-21.0.3+9.zip (209,087,631 bytes read)
+	at PluginClassLoader for adoptopenjdk//io.jenkins.plugins.adoptopenjdk.AdoptOpenJDKInstaller.performInstallation(AdoptOpenJDKInstaller.java:136)
+	at hudson.tools.InstallerTranslator.getToolHome(InstallerTranslator.java:67)
+	at hudson.tools.ToolLocationNodeProperty.getToolHome(ToolLocationNodeProperty.java:109)
+	at hudson.tools.ToolInstallation.translateFor(ToolInstallation.java:221)
+	at hudson.model.JDK.forNode(JDK.java:150)
+	at hudson.model.AbstractProject.getEnvironment(AbstractProject.java:343)
+	at hudson.model.Run.getEnvironment(Run.java:2406)
+	at hudson.model.AbstractBuild.getEnvironment(AbstractBuild.java:957)
+	at PluginClassLoader for git//hudson.plugins.git.GitSCM.getParamExpandedRepos(GitSCM.java:512)
+	at PluginClassLoader for git//hudson.plugins.git.GitSCM.retrieveChanges(GitSCM.java:1203)
+	at PluginClassLoader for git//hudson.plugins.git.GitSCM._checkout(GitSCM.java:1311)
+	at PluginClassLoader for git//hudson.plugins.git.GitSCM.checkout(GitSCM.java:1278)
+	at hudson.scm.SCM.checkout(SCM.java:540)
+	at hudson.model.AbstractProject.checkout(AbstractProject.java:1250)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.defaultCheckout(AbstractBuild.java:649)
+	at jenkins.scm.SCMCheckoutStrategy.checkout(SCMCheckoutStrategy.java:85)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:522)
+	at hudson.model.Run.execute(Run.java:1840)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:44)
+	at hudson.model.ResourceController.execute(ResourceController.java:101)
+	at hudson.model.Executor.run(Executor.java:446)
+Finished: FAILURE

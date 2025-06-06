@@ -1,0 +1,37 @@
+Started
+[Wed Jun 04 09:12:04 UTC 2025] Starting branch indexing...
+ > /usr/bin/git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git ls-remote --symref -- https://github.com/ksdkr/Boardgame.git # timeout=10
+ > /usr/bin/git rev-parse --resolve-git-dir /var/lib/jenkins/caches/git-beb232fec51f2e8ad072582b62fc88e8/.git # timeout=10
+Setting origin to https://github.com/ksdkr/Boardgame.git
+ > /usr/bin/git config remote.origin.url https://github.com/ksdkr/Boardgame.git # timeout=10
+Fetching & pruning origin...
+Listing remote references...
+ > /usr/bin/git config --get remote.origin.url # timeout=10
+ > /usr/bin/git --version # timeout=10
+ > git --version # 'git version 2.34.1'
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git ls-remote -h -- https://github.com/ksdkr/Boardgame.git # timeout=10
+Fetching upstream changes from origin
+ > /usr/bin/git config --get remote.origin.url # timeout=10
+using GIT_ASKPASS to set credentials 
+ > /usr/bin/git fetch --tags --force --progress --prune -- origin +refs/heads/*:refs/remotes/origin/* # timeout=10
+Checking branches...
+  Checking branch main
+      ‘Jenkinsfile’ found
+    Met criteria
+Changes detected: main (ce59b25971c974c2d29264849a0daaf4cc7d52b1 → 5191e95126672f0dd0e399121574b68a6a0dac09)
+Scheduled build for branch: main
+  Checking branch test
+      ‘Jenkinsfile’ found
+    Met criteria
+No changes detected: test (still at ce59b25971c974c2d29264849a0daaf4cc7d52b1)
+  Checking branch dev
+      ‘Jenkinsfile’ found
+    Met criteria
+No changes detected: dev (still at d8247ebbcb584b1c29128b153a717dd04726fea4)
+Processed 3 branches
+[Wed Jun 04 09:12:05 UTC 2025] Finished branch indexing. Indexing took 1 sec
+Finished: SUCCESS
